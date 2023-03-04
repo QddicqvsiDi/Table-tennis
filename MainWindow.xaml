@@ -9,7 +9,8 @@
         WindowStyle = "None"
         ResizeMode="CanResize"
         Background="Transparent"
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
 
     <Border Background="#272537" CornerRadius="15">
         <Grid>
