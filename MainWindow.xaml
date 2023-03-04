@@ -5,12 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Table_tennis"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="1000">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="391*"/>
-            <ColumnDefinition Width="9*"/>
-        </Grid.ColumnDefinitions>
+        Title="tennis tournament" Height="750" Width="1100"
+        WindowStyle = "None"
+        ResizeMode="CanResize"
+        Background="Transparent"
+        AllowsTransparency="True">
 
-    </Grid>
+    <Border Background="#272537" CornerRadius="15">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="DesApp"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Foreground="White"
+                FontSize="22"
+                Margin="20 0 0 20"/>
+            
+        </Grid>
+
+    </Border>
+    
 </Window>
