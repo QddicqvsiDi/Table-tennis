@@ -24,5 +24,41 @@ namespace Table_tennis
         {
             InitializeComponent();
         }
+
+        bool isWiden = false;
+        private void window_initiateWiden(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            isWiden = true;
+        }
+
+        private void window_endWiden(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            isWiden = false;
+
+            // Make sure capture is released.
+            Rectangle rect = (Rectangle)sender;
+            rect.ReleaseMouseCapture();
+        }
+
+        private void window_Widen(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            Rectangle rect = (Rectangle)sender;
+            if (isWiden)
+            {
+                rect.CaptureMouse();
+                double newWidth = e.GetPosition(this).X + 0;
+                if (newWidth > 0) this.Width = newWidth;
+            }
+        }
+
+        private void titleBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) //Перемещение по экрану /**/
+        {
+            this.DragMove();
+        }
+
+        private void Close(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
